@@ -31,9 +31,9 @@ Window::Window()
 	recognizingbutton->setText(tr("Recognising the tones"));
 	recognizingbutton->setFixedHeight(40);
 	recognizingbutton->setFixedWidth(180);
-    recognizingbutton->setStyleSheet("background-color: skyblue");
+    	recognizingbutton->setStyleSheet("background-color: skyblue");
 
-    testingbutton = new QPushButton;
+    	testingbutton = new QPushButton;
 	testingbutton->setText(tr("Testing"));
 	testingbutton->setFixedHeight(40);
 	testingbutton->setFixedWidth(180);
@@ -51,19 +51,19 @@ Window::Window()
 	quitbutton->setFixedWidth(150);
 	quitbutton->setStyleSheet("background-color: lightcoral");
 
-    stopbutton = new QPushButton;
+    	stopbutton = new QPushButton;
 	stopbutton->setText(tr("stop"));
 	stopbutton->setFixedHeight(30);
 	stopbutton->setFixedWidth(100);
 	stopbutton->hide();
-    stopbutton->setStyleSheet("background-color: khaki");
+    	stopbutton->setStyleSheet("background-color: khaki");
 
 	resumebutton = new QPushButton;
 	resumebutton->setText(tr("resume"));
 	resumebutton->setFixedHeight(30);
 	resumebutton->setFixedWidth(100);
 	resumebutton->hide();
-    resumebutton->setStyleSheet("background-color: khaki");
+    	resumebutton->setStyleSheet("background-color: khaki");
 
 	exitbutton = new QPushButton;
 	exitbutton->setText(tr("exit"));
@@ -122,9 +122,9 @@ Window::Window()
 	tibutton->hide();
 	tibutton->setStyleSheet("color: black; background-color: ivory");
 
-    feedbackbutton = new QPushButton;
+    	feedbackbutton = new QPushButton;
 	feedbackbutton->setText(tr("feedback"));
-    feedbackbutton->setFixedHeight(30);
+   	feedbackbutton->setFixedHeight(30);
 	feedbackbutton->setFixedWidth(100);
 	feedbackbutton->hide();
 	feedbackbutton->setStyleSheet("color: black; background-color: grey");
@@ -154,24 +154,24 @@ Window::Window()
 	text3->setFixedHeight(30);
 	text3->setFixedWidth(70);
 	text3->hide();
-    //text3->setStyleSheet("color: black; background-color: red");
+    	//text3->setStyleSheet("color: black; background-color: red");
 	//QPushButton *pushbutton1 = new QPushButton(this);      // to open new window when pressing pushbutton
-    // QWidget *widget = new QWidget(this);
-    //widget->setWindowFlags(Qt::Window);
-    // widget->setWindowTitle("New Window");
+    	// QWidget *widget = new QWidget(this);
+    	//widget->setWindowFlags(Qt::Window);
+    	// widget->setWindowTitle("New Window");
    
 
 
-    // Player  declaration
-     player = new QMediaPlayer;
-    // Set player as a C-scale video located in the src directory 
-     player->setMedia(QUrl::fromLocalFile(QFileInfo("C-scale.mp4").absoluteFilePath()));
+    	// Player  declaration
+     	player = new QMediaPlayer;
+    	// Set player as a C-scale video located in the src directory 
+     	player->setMedia(QUrl::fromLocalFile(QFileInfo("C-scale.mp4").absoluteFilePath()));
 	// Set sound volume 
-	 player->setVolume(50);   
+	player->setVolume(50);   
 	// Intialise video widget        
-	 videoWidget = new QVideoWidget;
+	videoWidget = new QVideoWidget;
 	// Allocate the video to Player 
-     player->setVideoOutput(videoWidget);
+     	player->setVideoOutput(videoWidget);
 
 	connect(learningbutton, SIGNAL(clicked()), this, SLOT(playSlot()));  //connect button1 to the playSlot
 	connect(stopbutton, SIGNAL(clicked()), this, SLOT(pauseSlot()));  //connect stoputton to the pause slot
@@ -191,7 +191,7 @@ Window::Window()
 	vLayout->addWidget(recognizingbutton);
 	vLayout->addWidget(testingbutton);
 	vLayout->addWidget(piano);
-    vLayout->addWidget(quitbutton);
+    	vLayout->addWidget(quitbutton);
 	
 	// plot horizontally 
 	hLayout = new QHBoxLayout;
@@ -205,7 +205,7 @@ Window::Window()
 	hLayout->addWidget(sobutton);
 	hLayout->addWidget(labutton);
 	hLayout->addWidget(tibutton);
-    hLayout->addWidget(feedbackbutton);
+    	hLayout->addWidget(feedbackbutton);
 	hLayout->addWidget(text);
 	hLayout->addWidget(text3);	
 	hLayout->addWidget(stoprecording);
@@ -237,8 +237,8 @@ void Window::playSlot()
 	exitbutton->show();
 	stopbutton->show();
 	resumebutton->show();
-    videoWidget->show();
-    player->play();                 //play the song
+    	videoWidget->show();
+    	player->play();                 //play the song
 	stopbutton->setEnabled(true);
 	recognizingbutton->setDisabled(true);  //disable every button in the app while listening to avoid conflicts
 	testingbutton->setDisabled(true);
@@ -248,9 +248,9 @@ void Window::playSlot()
 //this function is used to pause the learning video
 void Window::pauseSlot()  
 { 
-    player->pause();             //pause the song then enable the user to press any button 
+    	player->pause();             //pause the song then enable the user to press any button 
    	resumebutton->setEnabled(true);
-    stopbutton->setDisabled(true);
+    	stopbutton->setDisabled(true);
 	 
 }
 void Window::resumeSlot()  
@@ -264,10 +264,10 @@ void Window::resumeSlot()
 void Window::exitSlot()
 {   	
 	exitbutton->hide();
-    videoWidget->hide();
+    	videoWidget->hide();
 	player->stop();  
-    learningbutton->setEnabled(true);
-    stopbutton->hide();
+    	learningbutton->setEnabled(true);
+    	stopbutton->hide();
 	resumebutton->hide();
 	dobutton->hide();
 	rebutton->hide();
@@ -280,7 +280,7 @@ void Window::exitSlot()
 	text3->hide();
 	feedbackbutton->hide();
 	stoprecording->hide();
-    recognizingbutton->setEnabled(true);
+    	recognizingbutton->setEnabled(true);
 	testingbutton->setEnabled(true);
 	piano->setEnabled(true);
 	
@@ -308,13 +308,13 @@ void Window::exitSlot()
 	text3->show();
 
 	QAudioFormat format;
-    // Set up the desired format, for example:
-    format.setSampleRate(sampleRate); //how fast you take the data 44.1khz
-    format.setChannelCount(1);
-    format.setSampleSize(8);  // 8 bits
-    format.setCodec("audio/mpeg");
-    format.setByteOrder(QAudioFormat::LittleEndian);
-    format.setSampleType(QAudioFormat::UnSignedInt);
+    	// Set up the desired format, for example:
+    	format.setSampleRate(sampleRate); //how fast you take the data 44.1khz
+    	format.setChannelCount(1);
+    	format.setSampleSize(8);  // 8 bits
+    	format.setCodec("audio/mpeg");
+    	format.setByteOrder(QAudioFormat::LittleEndian);
+    	format.setSampleType(QAudioFormat::UnSignedInt);
 
     QAudioDeviceInfo info = QAudioDeviceInfo::defaultInputDevice();
     if (!info.isFormatSupported(format)) {
@@ -322,7 +322,7 @@ void Window::exitSlot()
         format = info.nearestFormat(format);
    	 }
 	// initialise new audio	
-    audio = new QAudioInput(format, this);
+    	audio = new QAudioInput(format, this);
 	// size of imput data
 	audio->setBufferSize(fftbuffsize); 
 	// slot connection between audio and readmicrophone data
@@ -341,7 +341,7 @@ void Window::exitSlot()
 
 void Window::readMicrophone()
 {
-    static QString str = "melody(click here to hide!): ";
+    	static QString str = "melody(click here to hide!): ";
 	QByteArray datain = readMic->data();
 	readMic->buffer().clear();
 	readMic->reset();
@@ -585,7 +585,6 @@ void Window::readMicrophone()
 				text->clear();
 				text3->setStyleSheet("color: black; background-color: white");
 				text->setStyleSheet("color: black; background-color: white");
-				pianoPlayer();
 			}
 		}
 	}
@@ -633,7 +632,7 @@ void Window::testingSlot()
 	recognizingbutton->setDisabled(true);
 	testingbutton->setEnabled(true);
 	piano->setDisabled(true);
-    stopbutton->hide(); 
+    	stopbutton->hide(); 
 	resumebutton->hide();
 	exitbutton->show();
 	dobutton->show();
@@ -646,11 +645,11 @@ void Window::testingSlot()
    	feedbackbutton->setText(tr("feedback"));
 	feedbackbutton->setStyleSheet("color: black; background-color: grey");   
 	feedbackbutton->show();
-    srand((unsigned) time(0));
-    int randomNumber;
-    for (int index = 0; index < 1; index++) {
-    randomNumber = (rand() % 7) + 1;
-    qDebug() << randomNumber;
+    	srand((unsigned) time(0));
+    	int randomNumber;
+    	for (int index = 0; index < 1; index++) {
+    	randomNumber = (rand() % 7) + 1;
+    	qDebug() << randomNumber;
 	}
    
    if (randomNumber==1)
