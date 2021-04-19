@@ -585,6 +585,13 @@ void Window::readMicrophone()
 				text->clear();
 				text3->setStyleSheet("color: black; background-color: white");
 				text->setStyleSheet("color: black; background-color: white");
+				dobutton->setStyleSheet("color: black; background-color: ivory");
+				rebutton->setStyleSheet("color: black; background-color: ivory");
+				mibutton->setStyleSheet("color: black; background-color: ivory");
+				fabutton->setStyleSheet("color: black; background-color: ivory");
+				sobutton->setStyleSheet("color: black; background-color: ivory");
+				labutton->setStyleSheet("color: black; background-color: ivory");
+				tibutton->setStyleSheet("color: black; background-color: ivory");
 			}
 		}
 	}
