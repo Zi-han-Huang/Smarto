@@ -87,6 +87,7 @@ public slots:
 		void clearnotes();
 		void feedbackSlot();
 		void feedbackWrong();
+		void pianokeyIni();
 
 // internal variables for the window class
 private:

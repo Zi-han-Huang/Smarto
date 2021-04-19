@@ -390,13 +390,8 @@ void Window::readMicrophone()
 					str.append("1 "); 
 					melody->setText(str);
 					t2 = t1;
+					pianokeyIni();
 					dobutton->setStyleSheet("color: black; background-color: darkseagreen");
-					rebutton->setStyleSheet("color: black; background-color: ivory");
-					mibutton->setStyleSheet("color: black; background-color: ivory");
-					fabutton->setStyleSheet("color: black; background-color: ivory");
-					sobutton->setStyleSheet("color: black; background-color: ivory");
-					labutton->setStyleSheet("color: black; background-color: ivory");
-					tibutton->setStyleSheet("color: black; background-color: ivory");
 				}
 				else if((peakHertz > pow (2, 0.5/12.0)) &&  (peakHertz < pow (2, 1.0/12.0))){
 					text->clear();	
@@ -418,13 +413,8 @@ void Window::readMicrophone()
 						str.append("2 "); 
 						melody->setText(str);
 						t2 = t1;
-						dobutton->setStyleSheet("color: black; background-color: ivory");
+						pianokeyIni();
 						rebutton->setStyleSheet("color: black; background-color: darkseagreen");
-						mibutton->setStyleSheet("color: black; background-color: ivory");
-						fabutton->setStyleSheet("color: black; background-color: ivory");
-						sobutton->setStyleSheet("color: black; background-color: ivory");
-						labutton->setStyleSheet("color: black; background-color: ivory");
-						tibutton->setStyleSheet("color: black; background-color: ivory");
 					}
 					else if((peakHertz > pow (2,2.5/12.0))&& (peakHertz < pow (2,3.0/12.0))){
 						text->clear();	
@@ -447,13 +437,8 @@ void Window::readMicrophone()
 						melody->setText(str); 
 						t2 = t1;
 						std::cout << "t2"  << ctime(&t2);
-						dobutton->setStyleSheet("color: black; background-color: ivory");
-						rebutton->setStyleSheet("color: black; background-color: ivory");
+						pianokeyIni();
 						mibutton->setStyleSheet("color: black; background-color: darkseagreen");
-						fabutton->setStyleSheet("color: black; background-color: ivory");
-						sobutton->setStyleSheet("color: black; background-color: ivory");
-						labutton->setStyleSheet("color: black; background-color: ivory");
-						tibutton->setStyleSheet("color: black; background-color: ivory");
 					}
 					else if((peakHertz > pow (2, 4.25/12.0)) && (peakHertz < pow (2, 4.5/12.0))){
 						text->clear();	
@@ -475,13 +460,8 @@ void Window::readMicrophone()
 						str.append("4 "); 
 						melody->setText(str);
 						t2 = t1;
-						dobutton->setStyleSheet("color: black; background-color: ivory");
-						rebutton->setStyleSheet("color: black; background-color: ivory");
-						mibutton->setStyleSheet("color: black; background-color: ivory");
+						pianokeyIni();
 						fabutton->setStyleSheet("color: black; background-color: darkseagreen");
-						sobutton->setStyleSheet("color: black; background-color: ivory");
-						labutton->setStyleSheet("color: black; background-color: ivory");
-						tibutton->setStyleSheet("color: black; background-color: ivory");
 					}
 					else if((peakHertz > pow (2, 5.5/12.0)) && (peakHertz < pow (2, 6.0/12.0))){
 						text->clear();	
@@ -503,13 +483,8 @@ void Window::readMicrophone()
 						QString note = str.append("5 "); 
 						melody->setText(str);
 						t2 = t1;
-						dobutton->setStyleSheet("color: black; background-color: ivory");
-						rebutton->setStyleSheet("color: black; background-color: ivory");
-						mibutton->setStyleSheet("color: black; background-color: ivory");
-						fabutton->setStyleSheet("color: black; background-color: ivory");
+						pianokeyIni();
 						sobutton->setStyleSheet("color: black; background-color: darkseagreen");
-						labutton->setStyleSheet("color: black; background-color: ivory");
-						tibutton->setStyleSheet("color: black; background-color: ivory");
 					}
 					else if ((peakHertz > pow (2, 7.5/12.0)) && (peakHertz < pow (2, 8.0/12.0))){
 						text->clear();	
@@ -531,13 +506,8 @@ void Window::readMicrophone()
 						QString note = str.append("6 ");
 						melody->setText(str); 
 						t2 = t1;
-						dobutton->setStyleSheet("color: black; background-color: ivory");
-						rebutton->setStyleSheet("color: black; background-color: ivory");
-						mibutton->setStyleSheet("color: black; background-color: ivory");
-						fabutton->setStyleSheet("color: black; background-color: ivory");
-						sobutton->setStyleSheet("color: black; background-color: ivory");
+						pianokeyIni();
 						labutton->setStyleSheet("color: black; background-color: darkseagreen");
-						tibutton->setStyleSheet("color: black; background-color: ivory");
 					}
 					else if((peakHertz > pow (2, 9.5/12.0)) && (peakHertz < pow (2, 10.0/12.0))){
 						text->clear();	
@@ -560,12 +530,7 @@ void Window::readMicrophone()
 						QString note = str.append("7 ");
 						melody->setText(str);
 						t2 = t1;
-						dobutton->setStyleSheet("color: black; background-color: ivory");
-						rebutton->setStyleSheet("color: black; background-color: ivory");
-						mibutton->setStyleSheet("color: black; background-color: ivory");
-						fabutton->setStyleSheet("color: black; background-color: ivory");
-						sobutton->setStyleSheet("color: black; background-color: ivory");
-						labutton->setStyleSheet("color: black; background-color: ivory");
+						pianokeyIni();
 						tibutton->setStyleSheet("color: black; background-color: darkseagreen");
 					}
 				else if ((peakHertz > pow (2, 11.5/12.0)) &&  (peakHertz < pow ( 2,12/12.0))){
@@ -585,13 +550,7 @@ void Window::readMicrophone()
 				text->clear();
 				text3->setStyleSheet("color: black; background-color: white");
 				text->setStyleSheet("color: black; background-color: white");
-				dobutton->setStyleSheet("color: black; background-color: ivory");
-				rebutton->setStyleSheet("color: black; background-color: ivory");
-				mibutton->setStyleSheet("color: black; background-color: ivory");
-				fabutton->setStyleSheet("color: black; background-color: ivory");
-				sobutton->setStyleSheet("color: black; background-color: ivory");
-				labutton->setStyleSheet("color: black; background-color: ivory");
-				tibutton->setStyleSheet("color: black; background-color: ivory");
+				pianokeyIni();
 			}
 		}
 	}
@@ -815,13 +774,8 @@ void Window::DoPressedSlot()
 	player->setMedia(QUrl::fromLocalFile(QDir("../audiofiles/do.mp3").absolutePath()));
 	player->setVolume(90); 
 	player->play();
+	pianokeyIni();
 	dobutton->setStyleSheet("color: black; background-color: silver");
-	rebutton->setStyleSheet("color: black; background-color: ivory");
-	mibutton->setStyleSheet("color: black; background-color: ivory");
-	fabutton->setStyleSheet("color: black; background-color: ivory");
-	sobutton->setStyleSheet("color: black; background-color: ivory");
-	labutton->setStyleSheet("color: black; background-color: ivory");
-	tibutton->setStyleSheet("color: black; background-color: ivory");
  }
 
 void Window::RePressedSlot()
@@ -831,13 +785,8 @@ void Window::RePressedSlot()
 	player->setMedia(QUrl::fromLocalFile(QDir("../audiofiles/re.mp3").absolutePath()));
 	player->setVolume(90); 
 	player->play();
-	dobutton->setStyleSheet("color: black; background-color: ivory");
+	pianokeyIni();
 	rebutton->setStyleSheet("color: black; background-color: silver");
-	mibutton->setStyleSheet("color: black; background-color: ivory");
-	fabutton->setStyleSheet("color: black; background-color: ivory");
-	sobutton->setStyleSheet("color: black; background-color: ivory");
-	labutton->setStyleSheet("color: black; background-color: ivory");
-	tibutton->setStyleSheet("color: black; background-color: ivory");
  }
  void Window::MiPressedSlot()
  {
@@ -846,13 +795,8 @@ void Window::RePressedSlot()
 	player->setMedia(QUrl::fromLocalFile(QDir("../audiofiles/mi.mp3").absolutePath()));
 	player->setVolume(90); 
 	player->play();
-	dobutton->setStyleSheet("color: black; background-color: ivory");
-	rebutton->setStyleSheet("color: black; background-color: ivory");
+	pianokeyIni();
 	mibutton->setStyleSheet("color: black; background-color: silver");
-	fabutton->setStyleSheet("color: black; background-color: ivory");
-	sobutton->setStyleSheet("color: black; background-color: ivory");
-	labutton->setStyleSheet("color: black; background-color: ivory");
-	tibutton->setStyleSheet("color: black; background-color: ivory");
  }
 void Window::FaPressedSlot()
  {
@@ -861,13 +805,8 @@ void Window::FaPressedSlot()
 	player->setMedia(QUrl::fromLocalFile(QDir("../audiofiles/fa.mp3").absolutePath()));
 	player->setVolume(90); 
 	player->play();
-	dobutton->setStyleSheet("color: black; background-color: ivory");
-	rebutton->setStyleSheet("color: black; background-color: ivory");
-	mibutton->setStyleSheet("color: black; background-color: ivory");
+	pianokeyIni();
 	fabutton->setStyleSheet("color: black; background-color: silver");
-	sobutton->setStyleSheet("color: black; background-color: ivory");
-	labutton->setStyleSheet("color: black; background-color: ivory");
-	tibutton->setStyleSheet("color: black; background-color: ivory");
  }
 void Window::SoPressedSlot()
  {
@@ -876,13 +815,8 @@ void Window::SoPressedSlot()
 	player->setMedia(QUrl::fromLocalFile(QDir("../audiofiles/so.mp3").absolutePath()));
 	player->setVolume(90); 
 	player->play();
-	dobutton->setStyleSheet("color: black; background-color: ivory");
-	rebutton->setStyleSheet("color: black; background-color: ivory");
-	mibutton->setStyleSheet("color: black; background-color: ivory");
-	fabutton->setStyleSheet("color: black; background-color: ivory");
+	pianokeyIni();
 	sobutton->setStyleSheet("color: black; background-color: silver");
-	labutton->setStyleSheet("color: black; background-color: ivory");
-	tibutton->setStyleSheet("color: black; background-color: ivory");
  }
 void Window::LaPressedSlot()
  {
@@ -891,13 +825,8 @@ void Window::LaPressedSlot()
 	player->setMedia(QUrl::fromLocalFile(QDir("../audiofiles/la.mp3").absolutePath()));
 	player->setVolume(90); 
 	player->play();
-	dobutton->setStyleSheet("color: black; background-color: ivory");
-	rebutton->setStyleSheet("color: black; background-color: ivory");
-	mibutton->setStyleSheet("color: black; background-color: ivory");
-	fabutton->setStyleSheet("color: black; background-color: ivory");
-	sobutton->setStyleSheet("color: black; background-color: ivory");
+	pianokeyIni();
 	labutton->setStyleSheet("color: black; background-color: silver");
-	tibutton->setStyleSheet("color: black; background-color: ivory");
  }
 void Window::TiPressedSlot()
  {
@@ -906,25 +835,14 @@ void Window::TiPressedSlot()
 	player->setMedia(QUrl::fromLocalFile(QDir("../audiofiles/ti.mp3").absolutePath()));
 	player->setVolume(90); 
 	player->play();
-	dobutton->setStyleSheet("color: black; background-color: ivory");
-	rebutton->setStyleSheet("color: black; background-color: ivory");
-	mibutton->setStyleSheet("color: black; background-color: ivory");
-	fabutton->setStyleSheet("color: black; background-color: ivory");
-	sobutton->setStyleSheet("color: black; background-color: ivory");
-	labutton->setStyleSheet("color: black; background-color: ivory");
+	pianokeyIni();
 	tibutton->setStyleSheet("color: black; background-color: silver");
  }
 
 void Window::pianoPlayer()
 {	
 	//initialize the color of the piano key 
-	dobutton->setStyleSheet("color: black; background-color: ivory");
-	rebutton->setStyleSheet("color: black; background-color: ivory");
-	mibutton->setStyleSheet("color: black; background-color: ivory");
-	fabutton->setStyleSheet("color: black; background-color: ivory");
-	sobutton->setStyleSheet("color: black; background-color: ivory");
-	labutton->setStyleSheet("color: black; background-color: ivory");
-	tibutton->setStyleSheet("color: black; background-color: ivory");
+	pianokeyIni();
 	exitbutton->show();
 	dobutton->show();
 	rebutton->show();
@@ -947,7 +865,16 @@ void Window::pianoPlayer()
 	connect(labutton, SIGNAL(clicked()), this, SLOT(LaPressedSlot()));
 	connect(tibutton, SIGNAL(clicked()), this, SLOT(TiPressedSlot()));
 }
-
+void Window::pianokeyIni()
+{
+	dobutton->setStyleSheet("color: black; background-color: ivory");
+	rebutton->setStyleSheet("color: black; background-color: ivory");
+	mibutton->setStyleSheet("color: black; background-color: ivory");
+	fabutton->setStyleSheet("color: black; background-color: ivory");
+	sobutton->setStyleSheet("color: black; background-color: ivory");
+	labutton->setStyleSheet("color: black; background-color: ivory");
+	tibutton->setStyleSheet("color: black; background-color: ivory");
+}
 void Window::clearnotes()
 {
 	melody->hide();
