@@ -394,15 +394,13 @@ void Window::readMicrophone()
 					dobutton->setStyleSheet("color: black; background-color: darkseagreen");
 				}
 				else if((peakHertz > pow (2, 0.5/12.0)) &&  (peakHertz < pow (2, 1.0/12.0))){
-					text->clear();	
+					pianokeyIni();
 					text3->setText("High Do!");
-					text->setStyleSheet("color: black; background-color: white");
 					text3->setStyleSheet("color: black; background-color: red");
 				}
 				else if((peakHertz < pow (2, -0.5/12.0)) && (peakHertz > pow (2, -1.0/12.0))){	
-					text3->clear();
+					pianokeyIni();
 					text->setText("Low Do!");
-					text3->setStyleSheet("color: black; background-color: white");
 					text->setStyleSheet("color: black; background-color: red");	
 				}
 			}	
@@ -417,15 +415,13 @@ void Window::readMicrophone()
 						rebutton->setStyleSheet("color: black; background-color: darkseagreen");
 					}
 					else if((peakHertz > pow (2,2.5/12.0))&& (peakHertz < pow (2,3.0/12.0))){
-						text->clear();	
+						pianokeyIni();	
 						text3->setText("High Re!");
-						text->setStyleSheet("color: black; background-color: white");
 						text3->setStyleSheet("color: black; background-color: red");
 					}
 					else if((peakHertz > pow (2,1.0/12.0))&& (peakHertz < pow (2,1.5/12.0))){	
-						text3->clear();
+						pianokeyIni();
 						text->setText("Low Re!");
-						text3->setStyleSheet("color: black; background-color: white");
 						text->setStyleSheet("color: black; background-color: red");
 					}
 			}
@@ -441,15 +437,13 @@ void Window::readMicrophone()
 						mibutton->setStyleSheet("color: black; background-color: darkseagreen");
 					}
 					else if((peakHertz > pow (2, 4.25/12.0)) && (peakHertz < pow (2, 4.5/12.0))){
-						text->clear();	
+						pianokeyIni();
 						text3->setText("High Mi!");
-						text->setStyleSheet("color: black; background-color: white");
 						text3->setStyleSheet("color: black; background-color: red");
 					}
 					else if((peakHertz > pow (2, 3.0/12.0)) && (peakHertz <= pow (2, 3.75/12.0))){
-						text3->clear();
+						pianokeyIni();
 						text->setText("Low Mi!");
-						text3->setStyleSheet("color: black; background-color: white");
 						text->setStyleSheet("color: black; background-color: red");
 					}	
 			}	
@@ -464,15 +458,13 @@ void Window::readMicrophone()
 						fabutton->setStyleSheet("color: black; background-color: darkseagreen");
 					}
 					else if((peakHertz > pow (2, 5.5/12.0)) && (peakHertz < pow (2, 6.0/12.0))){
-						text->clear();	
-						text->setStyleSheet("color: black; background-color: white");
+						pianokeyIni();	
 						text3->setStyleSheet("color: black; background-color: red");
 						text3->setText("High Fa!");
 					}
 					else if((peakHertz > pow (2, 4.5/12.0)) && (peakHertz < pow (2, 4.75/12.0))){	
-						text3->clear();
+						pianokeyIni();
 						text->setText("Low Fa!");
-						text3->setStyleSheet("color: black; background-color: white");
 						text->setStyleSheet("color: black; background-color: red");
 					}
 			} 
@@ -487,15 +479,13 @@ void Window::readMicrophone()
 						sobutton->setStyleSheet("color: black; background-color: darkseagreen");
 					}
 					else if ((peakHertz > pow (2, 7.5/12.0)) && (peakHertz < pow (2, 8.0/12.0))){
-						text->clear();	
+						pianokeyIni();	
 						text3->setText("High So!");
-						text->setStyleSheet("color: black; background-color: white");
 						text3->setStyleSheet("color: black; background-color: red");
 					}
 					else if ((peakHertz > pow (2, 6.0/12.0)) && (peakHertz < pow (2, 6.5/12.0))){
-						text3->clear();
+						pianokeyIni();
 						text->setText("Low So!");
-						text3->setStyleSheet("color: black; background-color: white");
 						text->setStyleSheet("color: black; background-color: red");
 					}	
 			}
@@ -510,16 +500,13 @@ void Window::readMicrophone()
 						labutton->setStyleSheet("color: black; background-color: darkseagreen");
 					}
 					else if((peakHertz > pow (2, 9.5/12.0)) && (peakHertz < pow (2, 10.0/12.0))){
-						text->clear();	
-						text->setStyleSheet("color: black; background-color: white");
+						pianokeyIni();
 						text3->setStyleSheet("color: black; background-color: red");
 						text3->setText("High La!");
 					}
 					else if((peakHertz > pow (2, 8.0/12.0)) && (peakHertz < pow (2, 8.5/12.0))){
-						text->clear();	
-						text3->clear();
+						pianokeyIni();
 						text->setText("Low La!");
-						text3->setStyleSheet("color: black; background-color: white");
 						text->setStyleSheet("color: black; background-color: red");
 					}				
 			}
@@ -532,24 +519,20 @@ void Window::readMicrophone()
 						t2 = t1;
 						pianokeyIni();
 						tibutton->setStyleSheet("color: black; background-color: darkseagreen");
+						
 					}
 				else if ((peakHertz > pow (2, 11.5/12.0)) &&  (peakHertz < pow ( 2,12/12.0))){
-							text->clear();	
-							text->setStyleSheet("color: black; background-color: white");
+							pianokeyIni();
 							text3->setStyleSheet("color: black; background-color: red");
 							text3->setText("High Ti!");
 				}	
 				else if ((peakHertz < pow (2, 10.5/12.0)) && (peakHertz > pow (2, 10/12.0))){
-							text3->clear();
-							text3->setStyleSheet("color: black; background-color: white");
+							pianokeyIni();
 							text->setStyleSheet("color: black; background-color: red");
 							text->setText("Low Ti!");
 				}
 			}
 			else{  
-				text->clear();
-				text3->setStyleSheet("color: black; background-color: white");
-				text->setStyleSheet("color: black; background-color: white");
 				pianokeyIni();
 			}
 		}
@@ -874,6 +857,10 @@ void Window::pianokeyIni()
 	sobutton->setStyleSheet("color: black; background-color: ivory");
 	labutton->setStyleSheet("color: black; background-color: ivory");
 	tibutton->setStyleSheet("color: black; background-color: ivory");
+	text->clear();	
+	text3->clear();	
+	text->setStyleSheet("color: black; background-color: white");
+	text3->setStyleSheet("color: black; background-color: white");
 }
 void Window::clearnotes()
 {
