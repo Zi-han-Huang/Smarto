@@ -1,7 +1,7 @@
 # Smart-Intonation
 music software for intonation training
 
-<h2> Hey there! I'm Mario and i am working with  Zihan and Jiajun on the Smart Intonation Software.</h2>
+<h2> Welcome to Smarto, a software for intonation detection in real-time!</h2>
 
 <h3> 👨🏻‍💻 &nbsp;About Us </h3>
 
